@@ -2,8 +2,22 @@
 Changelog for package mqtt_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.4.3 (2022-08-01)
+------------------
+* Merge pull request `#18 <https://github.com/LCAS/mqtt_bridge/issues/18>`_ from LCAS/server_tweaks
+  initial trials to set mosquitto server config
+* make the config file an argument (and fix some timing in test)
+* documenting the frequency flag
+* few more defaults for broker
+* initial trials to set mosquitto server config
+* Contributors: Marc Hanheide
+
+1.4.2 (2022-07-21)
+------------------
+* Merge pull request `#17 <https://github.com/LCAS/mqtt_bridge/issues/17>`_ from LCAS/bugfix_loggers
+  fixing missing function enable_loggers
+* fixing missing function enable_loggers
+* Contributors: Marc Hanheide, Your Name
 
 1.4.0 (2021-11-19 13:31)
 ------------------------
