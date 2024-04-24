@@ -22,7 +22,7 @@ bridge:
 - factory: mqtt_bridge.bridge:MqttToRosBridge
   msg_type: std_msgs.msg:String
   topic_from: argHRI/test1
-  topic_to: /argHRI/test
+  topic_to: /argHRI/test1
   latched: true
   qos: 1
 #   # ping pong
