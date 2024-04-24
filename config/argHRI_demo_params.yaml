@@ -9,8 +9,8 @@ mqtt:
     keepalive: 5
   private_path: device/001
 # Default is json serialiser, msgpack is more efficient
-serializer: msgpack:dumps
-deserializer: msgpack:loads
+serializer: json:dumps
+deserializer: json:loads
 bridge:
 - factory: mqtt_bridge.bridge:RosToMqttBridge
   msg_type: std_msgs.msg:String
