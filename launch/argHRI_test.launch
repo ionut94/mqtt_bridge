@@ -11,7 +11,7 @@
     <rosparam if="$(arg use_tls)" command="load" ns="mqtt" file="$(find mqtt_bridge)/config/tls_params.yaml" />
   </node>
   <node name="mqtt_bridge_extra" pkg="mqtt_bridge" type="mqtt_bridge_node.py" output="screen" respawn="true">
-    <rosparam>
+    <!-- <rosparam>
 mqtt:
   client:
     protocol: 4      # MQTTv311
@@ -45,6 +45,6 @@ bridge:
     latched: true
     qos: 2
 
-    </rosparam>
+    </rosparam> -->
   </node>
 </launch>
