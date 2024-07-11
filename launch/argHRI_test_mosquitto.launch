@@ -7,7 +7,7 @@
 
   <node name="mqtt_bridge" pkg="mqtt_bridge" type="mqtt_bridge_node.py" output="screen" respawn="true">
     <rosparam command="delete" param="" />
-    <rosparam command="load" file="$(find mqtt_bridge)/config/argHRI_demo_params.yaml" />
+    <rosparam command="load" file="$(find mqtt_bridge)/config/argHRI_demo_params_online.yaml" />
     <rosparam if="$(arg use_tls)" command="load" ns="mqtt" file="$(find mqtt_bridge)/config/tls_params.yaml" />
   </node>
 </launch>

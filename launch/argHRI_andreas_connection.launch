@@ -1,0 +1,13 @@
+<launch>
+  <arg name="use_tls" default="false" />
+  <arg name="mqtt_config" default="$(find mqtt_bridge)/config/mosquitto.conf" />
+
+  <!-- the port of the coordination_server mqtt_bridge server -->
+  <!-- <node pkg="mqtt_bridge" name="mosquitto_server" type="mosquitto_server.sh" output="screen" args="8883 $(arg mqtt_config)"/> -->
+
+  <node name="mqtt_bridge" pkg="mqtt_bridge" type="mqtt_bridge_node.py" output="screen" respawn="true">
+    <rosparam command="delete" param="" />
+    <rosparam command="load" file="$(find mqtt_bridge)/config/argHRI_demo_params_andreas.yaml" />
+    <rosparam if="$(arg use_tls)" command="load" ns="mqtt" file="$(find mqtt_bridge)/config/tls_params.yaml" />
+  </node>
+</launch>
