@@ -14,19 +14,6 @@ deserializer: json:loads
 bridge:
 - factory: mqtt_bridge.bridge:RosToMqttBridge
   msg_type: std_msgs.msg:String
-  topic_from: /argHRI/test
-  topic_to: argHRI/test1
-  frequency: 1
-  latched: true
-  qos: 1
-- factory: mqtt_bridge.bridge:MqttToRosBridge
-  msg_type: std_msgs.msg:String
-  topic_from: argHRI/test1
-  topic_to: /argHRI/test1
-  latched: true
-  qos: 1
-- factory: mqtt_bridge.bridge:RosToMqttBridge
-  msg_type: std_msgs.msg:String
   topic_from: /argHRI/robot_location
   topic_to: argHRI/robot_location
   frequency: 1
@@ -38,6 +25,19 @@ bridge:
   topic_to: /argHRI/robot_goal_location
   latched: true
   qos: 1
+# - factory: mqtt_bridge.bridge:RosToMqttBridge
+#   msg_type: std_msgs.msg:String
+#   topic_from: /argHRI/test
+#   topic_to: argHRI/test1
+#   frequency: 1
+#   latched: true
+#   qos: 1
+# - factory: mqtt_bridge.bridge:MqttToRosBridge
+#   msg_type: std_msgs.msg:String
+#   topic_from: argHRI/test1
+#   topic_to: /argHRI/test1
+#   latched: true
+#   qos: 1
 #   # ping pong
 #   - factory: mqtt_bridge.bridge:RosToMqttBridge
 #     msg_type: std_msgs.msg:Bool
