@@ -11,7 +11,7 @@
     <rosparam if="$(arg use_tls)" command="load" ns="mqtt" file="$(find mqtt_bridge)/config/tls_params.yaml" />
   </node>
 
-  <node name="location_publisher" pkg="argHRI" type="location_publisher.py" output="screen" respawn="true" />
-  <node name="location_publisher" pkg="argHRI" type="goal_subscriber.py" output="screen" respawn="true" />
+  <node name="location_publisher" pkg="mqtt_bridge" type="location_publisher.py" output="screen" respawn="true" />
+  <node name="goal_subscriber" pkg="mqtt_bridge" type="goal_subscriber.py" output="screen" respawn="true" />
 
 </launch>
