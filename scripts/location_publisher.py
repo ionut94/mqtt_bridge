@@ -9,13 +9,17 @@ def generate_locations():
     # Create a dictionary of locations
 
     locations = {}
-
+    locations["PS1"] = (5, 10)
+    locations["CS1"] = (10, 7)
+    
     # Generate 10 random x,y coordinates and names
-    for i in range(10):
-        x = random.uniform(-10, 10)
-        y = random.uniform(-10, 10)
-        name = "Location" +str(i+1)
-        locations[name] = (x, y)
+    # for i in range(10):
+    #     x = random.uniform(-10, 10)
+    #     y = random.uniform(-10, 10)
+    #     name = "Location" +str(i+1)
+    #     locations[name] = (x, y)
+
+
 
     return locations
 

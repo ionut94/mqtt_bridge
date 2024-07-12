@@ -1,7 +1,7 @@
 mqtt:
   client:
     protocol: 4      # MQTTv311
-    client_id: clientROS1
+    client_id: myAGV2
     clean_session: False
   connection:
     host: test.mosquitto.org

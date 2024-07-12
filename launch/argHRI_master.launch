@@ -2,9 +2,9 @@
     <!-- Launch another_launch_file.launch from another_package -->
     <include file="$(find myagv_odometry)/launch/myagv_active.launch" />
 
-    <!-- Launch argHRI_andreas_connection.launch from argHRI package
-    <include file="$(find argHRI)/launch/argHRI_andreas_connection.launch" /> -->
+    <!-- Launch argHRI_andreas_connection.launch from argHRI package -->
+    <include file="$(find mqtt_bridge)/launch/argHRI_andreas_connection.launch" />
 
     <!-- Launch online mqtt connection from argHRI package -->
-    <include file="$(find mqtt_bridge)/launch/argHRI_test_mosquitto.launch" />
+    <!-- <include file="$(find mqtt_bridge)/launch/argHRI_test_mosquitto.launch" /> -->
 </launch>

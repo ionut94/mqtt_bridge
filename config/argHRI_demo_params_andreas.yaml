@@ -25,6 +25,12 @@ bridge:
   topic_to: /argHRI/robot_goal_location
   latched: true
   qos: 1
+- factory: mqtt_bridge.bridge:RosToMqttBridge
+  msg_type: std_msgs.msg:Int32
+  topic_from: /argHRI/empty_trays
+  topic_to: argHRI/empty_trays
+  latched: true
+  qos: 1
 # - factory: mqtt_bridge.bridge:RosToMqttBridge
 #   msg_type: std_msgs.msg:String
 #   topic_from: /argHRI/test
