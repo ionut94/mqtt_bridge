@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import rospy
 from std_msgs.msg import String
 from nav_msgs.msg import Odometry
@@ -6,13 +7,14 @@ import random
 # Initialise the discreete locations
 def generate_locations():
     # Create a dictionary of locations
+
     locations = {}
 
     # Generate 10 random x,y coordinates and names
     for i in range(10):
         x = random.uniform(-10, 10)
         y = random.uniform(-10, 10)
-        name = f"Location {i+1}"
+        name = "Location" +str(i+1)
         locations[name] = (x, y)
 
     return locations
@@ -44,7 +46,7 @@ if __name__ == '__main__':
     print(locations)
 
     # Create a publisher for /robot_location topic
-    location_pub = rospy.Publisher('/robot_location', String, queue_size=10)
+    location_pub = rospy.Publisher('/argHRI/robot_location', String, queue_size=10)
 
     # Subscribe to the /odom topic to get continuous location data
     rospy.Subscriber('/odom', Odometry, scan_callback)
