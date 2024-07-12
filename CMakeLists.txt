@@ -10,6 +10,7 @@ install(PROGRAMS
   scripts/mqtt_bridge_node.py
   scripts/location_publisher.py
   scripts/goal_subscriber.py
+  scripts/trays_publisher.py
   scripts/mosquitto_server.sh
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

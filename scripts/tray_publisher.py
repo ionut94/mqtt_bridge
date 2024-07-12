@@ -8,7 +8,7 @@ def publish_empty_trays():
     rospy.init_node('empty_trays_publisher', anonymous=True)
 
     # Create a publisher for the empty trays topic
-    pub = rospy.Publisher('/argHRI/emptyTrays', Int32, queue_size=10)
+    pub = rospy.Publisher('/argHRI/empty_trays', Int32, queue_size=10)
 
     # Set the publishing rate (in Hz)
     rate = rospy.Rate(1)
