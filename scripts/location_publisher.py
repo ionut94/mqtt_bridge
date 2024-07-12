@@ -1,6 +1,4 @@
 import rospy
-from sensor_msgs.msg import LaserScan
-from geometry_msgs.msg import PointStamped
 from std_msgs.msg import String
 from nav_msgs.msg import Odometry
 import random
